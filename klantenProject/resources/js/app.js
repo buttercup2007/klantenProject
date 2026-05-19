@@ -6,3 +6,4 @@ const app = createApp({})
 app.component('qr-code', QrCode)
 
 app.mount('#app')
+

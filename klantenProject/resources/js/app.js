@@ -1,8 +1,9 @@
+console.log("🔥 app.js is running")
+
 import { createApp } from 'vue'
-import QrCode from './components/qrCode.vue'
 
-const app = createApp({})
-
-app.component('qr-code', QrCode)
+const app = createApp({
+    template: `<h1 style="color:green">Vue is WORKING</h1>`
+})
 
 app.mount('#app')

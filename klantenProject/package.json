@@ -15,7 +15,9 @@
         "vite": "^7.0.7"
     },
     "dependencies": {
+        "@chenfengyuan/vue-qrcode": "^2.0.0",
         "@vitejs/plugin-vue": "^6.0.7",
+        "qrcode": "^1.5.4",
         "qrcode.vue": "^3.9.1",
         "vue": "^3.5.34",
         "vue-router": "^5.0.7"

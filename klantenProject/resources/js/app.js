@@ -1,9 +1,8 @@
-console.log("🔥 app.js is running")
+import './bootstrap';
+import { createApp } from 'vue';
 
-import { createApp } from 'vue'
+import App from './components/App.vue';
 
-const app = createApp({
-    template: `<h1 style="color:green">Vue is WORKING</h1>`
-})
+const app = createApp(App);
 
-app.mount('#app')
+app.mount('#app');

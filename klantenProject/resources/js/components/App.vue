@@ -1,10 +1,15 @@
 <template>
   <div>
-    <h1>Scan om de student financering quiz te maken</h1>
+    <h1>Scan om de student financiering quiz te maken</h1>
 
     <img v-if="qrCodeUrl" :src="qrCodeUrl" />
-    </div>
 
+    <div>
+      <router-link to="/quiz">
+        Of klik hier om de quiz te maken!
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -15,10 +20,6 @@ const qrCodeUrl = ref('')
 
 onMounted(async () => {
   const quizUrl = `${window.location.origin}/quiz`
-
   qrCodeUrl.value = await QRCode.toDataURL(quizUrl)
-
 })
-
 </script>
-

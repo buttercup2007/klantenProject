@@ -91,4 +91,16 @@ h1 {
   font-family: Arial, sans-serif;
   text-align: left;
 }
+
+.info, .hbo, .opleiding, .lening-schulden {
+  background-color: #fdfcfc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hbo, .lening-schulden {
+  display: flex;
+  justify-content: flex-end;
+}
 </style>

@@ -1,55 +1,36 @@
 <script setup>
-
 </script>
 
 <template>
+  <nav class="navbar">
+    <div class="nav-title">student financiering</div>
 
-  <body>
-   
-    <nav class="navbar">
-      <div class="nav-title"> student financiering</div>
+    <div class="nav-links">
+      <router-link to="/info">Info</router-link>
+      <router-link to="/hbo">HBO</router-link>
+      <router-link to="/opleiding">Opleiding</router-link>
+      <router-link to="/home">Home</router-link>
+    </div>
+  </nav>
 
-        <ul class="nav-links">
-        <!--dropdown started stoppen en overstappen-->
-       <router-link to="/info">
-         Info
-       </router-link>
+  <div class="layout">
+    <!-- LEFT BLUE SECTION -->
+    <div class="left-panel">
+      <h1>INFO</h1>
 
-       <router-link to="/hbo">
-         HBO
-       </router-link>
+      <h2>Wat is studiefinanciering?</h2>
 
-       <router-link to="/opleiding">
-         opleiding
-       </router-link>
-
-       <router-link to="/home">
-         Home
-       </router-link>
-
-      </ul>
-
-    </nav>
-
-
-    <div class="navigators">
-
-      <div class="half-circle">
-    <div class="info">
-        <h1>INFO</h1>
+      <p>
+         Studiefinanciering is een financiële regeling van de Nederlandse overheid
+        die studenten ondersteunt tijdens hun opleiding. Het doel is om studeren
+        toegankelijk te maken voor iedereen, ongeacht de financiële situatie van
+        de student of diens ouders. De regeling wordt uitgevoerd door DUO
+        (Dienst Uitvoering Onderwijs).
+      </p>
     </div>
 
-    <h2>Wat is studiefinanciering?</h2>
-
-    <div class="info-text">
-        <p>
-            Studiefinanciering is financiële ondersteuning van de Nederlandse
-            overheid voor studenten in het mbo, hbo en wo. Deze regeling wordt
-            uitgevoerd door de Dienst Uitvoering Onderwijs (DUO).
-        </p>
-    </div>
-
-    <h2>Welke vormen van studiefinancing zijn er?</h2>
+    <div class="right-panel">
+      <h2>Welke vormen van studiefinanciering zijn er?</h2>
 
       <p>
         Studiefinanciering bestaat uit verschillende onderdelen. Studenten kunnen
@@ -66,154 +47,147 @@
         gelijke kansen voor iedereen te creëren.
       </p>
 
-      <h2>studentreisproduct</h2>
-
+      <h2>Studentenreisproduct</h2>
       <p>
-        Met het studentenreisproduct kunnen studenten gratis of met korting
+         Met het studentenreisproduct kunnen studenten gratis of met korting
         reizen met het openbaar vervoer. Studenten kunnen kiezen tussen een
         weekabonnement of een weekendabonnement. Hierdoor wordt het makkelijker
         en goedkoper om naar school, stage of universiteit te reizen.
       </p>
 
       <h2>Lenen voor je studie</h2>
-
       <p>
-        Wanneer de beurs niet voldoende is, kunnen studenten ervoor kiezen om
+         Wanneer de beurs niet voldoende is, kunnen studenten ervoor kiezen om
         geld te lenen bij DUO. Dit geld moet later worden terugbetaald. Het is
         daarom belangrijk om goed na te denken over hoeveel je leent. Hoe meer
         je leent, hoe hoger je studieschuld na het afronden van je opleiding.
       </p>
 
-    <p>
-        Gelukkig biedt DUO vaak gunstige voorwaarden. Zo hoef je meestal pas na
+      <p>
+       Gelukkig biedt DUO vaak gunstige voorwaarden. Zo hoef je meestal pas na
         je studie te beginnen met terugbetalen en wordt er rekening gehouden met
         je inkomen. Hierdoor blijft de terugbetaling voor veel afgestudeerden
         betaalbaar.
-    </p>
 
-    <h2>Waarom is studiefinanciering belangrijk?</h2>
+      </p>
 
-
-    <p>
-        Dankzij studiefinanciering krijgen meer mensen de mogelijkheid om een
+      <h2>Waarom is het belangrijk?</h2>
+      <p>
+         Dankzij studiefinanciering krijgen meer mensen de mogelijkheid om een
         opleiding te volgen. Het helpt studenten zich te concentreren op hun
         studie zonder zich voortdurend zorgen te maken over geld. Daarmee draagt
         het systeem bij aan gelijke kansen en een goed opgeleide samenleving.
-    </p>
+      </p>
 
+      <div class="cards">
+        <div class="card">
+          <h3> Basisbeurs</h3>
+          <p>Maandelijkse bijdrage voor studenten.</p>
+        </div>
+
+        <div class="card">
+          <h3> Studentenreisproduct</h3>
+          <p>Gratis of goedkoper reizen met het OV.</p>
+        </div>
+      </div>
     </div>
-    </div>
-
-  
-  </body>
-
+  </div>
 </template>
 
 <style>
-
-.body {
-  background-color: #26115f;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #d7e7f3;
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a9c9f8;
-  padding: 15px 20px;
-  position: relative;
-  z-index: 10;
-  
+  background: #7fb3d5;
+  padding: 15px 30px;
 }
 
 .nav-title {
-  color:black;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  font-family: Arial, sans-serif;
+  color: #000;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
-}   
+}
 
 .nav-links a {
   text-decoration: none;
-  color: #26115f;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
+  color: #1d1d5c;
+  font-weight: 500;
 }
 
-.navigators {
+.layout {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 20px;
-  padding: 20px;
-  
+  grid-template-columns: 380px 1fr;
+  height: calc(100vh - 70px);
 }
 
-h1 {
-  color: #26115f;
-  font-family: Arial, sans-serif;
-  text-align: left;
-}
-
-.info, .hbo, .opleiding, .lening-schulden {
-  background-color: #fdfcfc;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.hbo, .lening-schulden {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.half-circle {
-  width: 750px;
-  height: 350px;
-  background: #4b54d2;
-  border-bottom-right-radius: 300px;
-
-  position: relative;
+.left-panel {
+  background: linear-gradient(135deg, #005b96, #4f9de8);
+  color: white;
+  padding: 40px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 30px;
-  box-sizing: border-box;
 }
 
-.info h1 {
-    margin: 0;
+.left-panel h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-h2 {
-    margin: 10px 0;
-    font-size: 40px;
-    font-family: Arial, sans-serif;
-}
-.hbo {
-  grid-column: 2;
-  grid-row: 1;
+.left-panel h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.opleiding {
-  grid-column: 1;
-  grid-row: 2;
+.right-panel {
+  background: white;
+  margin: 40px;
+  padding: 40px;
+  border-radius: 20px;
+  overflow-y: auto;
 }
 
-.lening-schulden {
-  grid-column: 2;
-  grid-row: 2;
+.right-panel h2 {
+  color: #1d1d5c;
+  margin-top: 20px;
 }
 
-.info-text {
-    max-width: 400px;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
+.right-panel p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #f3f7ff;
+  padding: 20px;
+  border-radius: 16px;
+  flex: 1;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 </style>

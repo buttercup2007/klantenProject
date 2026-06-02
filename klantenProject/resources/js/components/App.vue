@@ -95,6 +95,19 @@ import '../../css/app-component.css'
     </div>
 
     <div class="right-panel-blue">
+
+      <div class="hbo-blue-container">
+        <h2>HBO</h2>
+        <p>
+          HBO staat voor Hoger Beroepsonderwijs. Het is een type onderwijs in
+          Nederland dat zich richt op praktische en beroepsgerichte opleidingen.
+          HBO-opleidingen duren meestal vier jaar en leiden op tot een bachelor
+          diploma. Na het behalen van een HBO-diploma kunnen studenten vaak
+          direct aan de slag in het werkveld of doorstromen naar een masteropleiding
+          aan een universiteit.
+        </p>
+
+      </div>
      
    </div>
 

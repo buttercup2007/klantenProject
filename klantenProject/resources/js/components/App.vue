@@ -14,8 +14,8 @@
   </nav>
 
   <div class="layout">
-    <!-- LEFT BLUE SECTION -->
-    <div class="left-panel">
+    
+    <div class="half-circle">
       <h1>INFO</h1>
 
       <h2>Wat is studiefinanciering?</h2>
@@ -29,7 +29,7 @@
       </p>
     </div>
 
-    <div class="right-panel">
+    <div class="white-container-info">
       <h2>Welke vormen van studiefinanciering zijn er?</h2>
 
       <p>
@@ -91,28 +91,55 @@
         </div>
       </div>
     </div>
+
+    <div class="right-panel-blue">
+     <h1>HBO</h1>
+
+     <h2>Informatie en mogelijkheden</h2>
+
+     <p>
+       Op deze pagina vind je informatie over onderwerpen die belangrijk zijn
+       voor studenten. Denk aan studiefinanciering, opleidingen, doorstroommogelijkheden
+       en andere regelingen die van invloed kunnen zijn op je studie.
+     </p>
+
+     <p>
+       De informatie helpt je om inzicht te krijgen in de verschillende keuzes
+       en mogelijkheden binnen het onderwijs. Zo kun je beter voorbereid beslissingen
+       nemen over je opleiding en financiële situatie.
+     </p>
+
+     <h2>Wat kun je hier vinden?</h2>
+
+     <p>
+       Je vindt hier onder andere informatie over studiefinanciering,
+       doorstroom naar het hbo, rechten van studenten, opleidingen en
+       praktische zaken rondom studeren.
+     </p>
+   </div>
+
   </div>
 </template>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #d7e7f3;
+  font-family: Arial, sans-serif; 
+  background-color: #b3cde0;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #7fb3d5;
-  padding: 15px 30px;
+  background-color: #6497b1;
+  padding: 15px 20px;
 }
 
 .nav-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: #000;
 }
 
 .nav-links {
@@ -122,72 +149,103 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #1d1d5c;
-  font-weight: 500;
+  color: #26115f;
+  font-size: 18px;
 }
 
+/* MAIN LAYOUT */
 .layout {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  height: calc(100vh - 70px);
+  grid-template-columns: 350px 1fr 350px;
+  gap: 20px;
+  padding: 20px;
+  min-height: calc(100vh - 80px);
 }
 
-.left-panel {
+/* LEFT PANEL */
+.half-circle {
   background: linear-gradient(135deg, #005b96, #4f9de8);
   color: white;
-  padding: 40px;
-  border-top-right-radius: 200px;
-  border-bottom-right-radius: 200px;
+
+  border-radius: 0px 0px 150px 0px;
+
+  width: 150%;
+  max-height: 300px;
+
+  padding: 20px;
+  margin-top: 20px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.left-panel h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.left-panel h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.right-panel {
+/* CENTER PANEL */
+.white-container-info {
   background: white;
-  margin: 40px;
   padding: 40px;
-  border-radius: 20px;
-  overflow-y: auto;
+
+ mask:
+  radial-gradient(
+    circle 400px at 0 0,
+    transparent 400px,
+    black 401px
+  );
+
+-webkit-mask:
+  radial-gradient(
+    circle 400px at 0 0,
+    transparent 400px,
+    black 401px
+  );
 }
 
-.right-panel h2 {
-  color: #1d1d5c;
-  margin-top: 20px;
+/* HEADINGS */
+.left-panel-blue h1,
+.right-panel-blue h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.right-panel p {
+.left-panel-blue h2,
+.right-panel-blue h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.left-panel-blue p,
+.right-panel-blue p {
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.white-container-info p {
   color: #333;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* CARDS */
 .cards {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .card {
-  background: #f3f7ff;
+  background: #f5f9ff;
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 20px;
   flex: 1;
-  transition: 0.2s;
+
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
 }
 </style>

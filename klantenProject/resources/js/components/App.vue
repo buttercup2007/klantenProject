@@ -9,6 +9,7 @@
       <router-link to="/info">Info</router-link>
       <router-link to="/hbo">HBO</router-link>
       <router-link to="/opleiding">Opleiding</router-link>
+      <router-link to="/shop">Shop</router-link>
       <router-link to="/home">Home</router-link>
     </div>
   </nav>
@@ -93,29 +94,7 @@
     </div>
 
     <div class="right-panel-blue">
-     <h1>HBO</h1>
-
-     <h2>Informatie en mogelijkheden</h2>
-
-     <p>
-       Op deze pagina vind je informatie over onderwerpen die belangrijk zijn
-       voor studenten. Denk aan studiefinanciering, opleidingen, doorstroommogelijkheden
-       en andere regelingen die van invloed kunnen zijn op je studie.
-     </p>
-
-     <p>
-       De informatie helpt je om inzicht te krijgen in de verschillende keuzes
-       en mogelijkheden binnen het onderwijs. Zo kun je beter voorbereid beslissingen
-       nemen over je opleiding en financiële situatie.
-     </p>
-
-     <h2>Wat kun je hier vinden?</h2>
-
-     <p>
-       Je vindt hier onder andere informatie over studiefinanciering,
-       doorstroom naar het hbo, rechten van studenten, opleidingen en
-       praktische zaken rondom studeren.
-     </p>
+     
    </div>
 
   </div>
@@ -128,12 +107,11 @@ body {
   background-color: #b3cde0;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6497b1;
+  background-color: #80a1b2;
   padding: 15px 20px;
 }
 
@@ -151,25 +129,29 @@ body {
   text-decoration: none;
   color: #26115f;
   font-size: 18px;
+  transition: color 0.2s ease;
 }
 
-/* MAIN LAYOUT */
+.nav-links a:hover {
+  color: #c5f7f9;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 350px 1fr 350px;
   gap: 20px;
   padding: 20px;
   min-height: calc(100vh - 80px);
+  align-items: start;
 }
 
-/* LEFT PANEL */
 .half-circle {
-  background: linear-gradient(135deg, #005b96, #4f9de8);
+  background: linear-gradient(135deg, #305c71, #b8d8f5);
   color: white;
 
-  border-radius: 0px 0px 150px 0px;
+  border-radius: 0px 0px 400px 0px;
 
-  width: 150%;
+  width: 170%;
   max-height: 300px;
 
   padding: 20px;
@@ -180,10 +162,11 @@ body {
   justify-content: center;
 }
 
-/* CENTER PANEL */
 .white-container-info {
   background: white;
   padding: 40px;
+  margin-top: 20px;
+  
 
  mask:
   radial-gradient(
@@ -200,7 +183,24 @@ body {
   );
 }
 
-/* HEADINGS */
+.half-circle p,
+.half-circle h2 {
+  max-width: 450px;
+  overflow-wrap: break-word;
+}
+
+/* text in containers */
+.half-circle,
+.white-container-info {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.half-circle p,
+.half-circle h2 {
+  max-width: 400px;
+}
+
 .left-panel-blue h1,
 .right-panel-blue h1 {
   font-size: 48px;
@@ -213,7 +213,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* TEXT */
 .left-panel-blue p,
 .right-panel-blue p {
   line-height: 1.8;

@@ -96,7 +96,10 @@ import '../../css/app-component.css'
 
     <div class="right-panel-blue">
 
-        <h2>HBO</h2>
+        <h1>HBO</h1>
+
+        <h2>Wat moet je weten over HBO?</h2>
+
         <p>
           HBO staat voor Hoger Beroepsonderwijs. Het is een type onderwijs in
           Nederland dat zich richt op praktische en beroepsgerichte opleidingen.

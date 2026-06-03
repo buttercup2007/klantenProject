@@ -96,7 +96,6 @@ import '../../css/app-component.css'
 
     <div class="right-panel-blue">
 
-      <div class="hbo-blue-container">
         <h2>HBO</h2>
         <p>
           HBO staat voor Hoger Beroepsonderwijs. Het is een type onderwijs in
@@ -106,8 +105,6 @@ import '../../css/app-component.css'
           direct aan de slag in het werkveld of doorstromen naar een masteropleiding
           aan een universiteit.
         </p>
-
-      </div>
      
    </div>
 

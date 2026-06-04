@@ -7,8 +7,8 @@ import '../../css/app-component.css'
     <div class="nav-title">student financiering</div>
 
     <div class="nav-links">
-      <router-link to="/info">Info</router-link>
-      <router-link to="/hbo">HBO</router-link>
+      <router-link to="/#info-section">Info</router-link>
+      <router-link to="/#hbo-section">HBO</router-link>
       <router-link to="/opleiding">Opleiding</router-link>
       <router-link to="/shop">Shop</router-link>
       <router-link to="/home">Home</router-link>
@@ -17,7 +17,7 @@ import '../../css/app-component.css'
 
   <div class="layout">
     
-    <div class="half-circle">
+    <div class="half-circle" id="info-section">
       <h1>INFO</h1>
       <h2>Wat is studiefinanciering?</h2>
       <p>
@@ -105,7 +105,7 @@ import '../../css/app-component.css'
       </p>
     </div>
 
-   <div class="white-container-hbo">
+   <div class="white-container-hbo" id="hbo-section">
 
       <h2>Doorstromen naar het hbo</h2>
 

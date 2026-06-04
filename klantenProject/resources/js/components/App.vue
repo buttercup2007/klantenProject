@@ -1,5 +1,11 @@
 <script setup>
 import '../../css/app-component.css'
+import '../../css/half-circle.css'
+import '../../css/info-container.css'
+import '../../css/cards.css'
+import '../../css/right-panel-blue.css'
+import '../../css/hbo-section.css'
+import '../../css/blue-bar.css'
 </script>
 
 <template>
@@ -16,7 +22,6 @@ import '../../css/app-component.css'
   </nav>
 
   <div class="layout">
-    
     <div class="half-circle" id="info-section">
       <h1>INFO</h1>
       <h2>Wat is studiefinanciering?</h2>
@@ -105,8 +110,7 @@ import '../../css/app-component.css'
       </p>
     </div>
 
-   <div class="white-container-hbo" id="hbo-section">
-
+    <div class="white-container-hbo" id="hbo-section">
       <h2>Doorstromen naar het hbo</h2>
 
       <p>
@@ -115,7 +119,6 @@ import '../../css/app-component.css'
         naar de toelatingseisen van de gekozen opleiding. Sommige opleidingen vragen aanvullende vakken of
         specifieke voorkennis. Een goede voorbereiding maakt de overstap vaak makkelijker. Hierdoor kunnen 
         studenten succesvol verder studeren op een hoger niveau.
-
       </p>
 
       <h2>Studiefinanciering voor hbo-studenten</h2>
@@ -150,8 +153,10 @@ import '../../css/app-component.css'
          van een opleiding te krijgen. Ook gesprekken met studenten en docenten kunnen nuttig zijn. Door 
          verschillende opleidingen te vergelijken maak je een beter geïnformeerde keuze. Een passende 
          opleiding vergroot vaak de kans op studiesucces.</p>
+    </div>
 
-      </div>
-
+    <div class="blue-bar">
+      <h1>Starten, overstappen en stoppen met een opleiding</h1>
+    </div>
   </div>
 </template>

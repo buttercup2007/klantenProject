@@ -1,0 +1,44 @@
+.half-circle {
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+  border-radius: 0px 0px 400px 0px;
+  width: 205%;
+  max-height: 380px;
+  transition: transform 0.4s ease;
+  border: 1px solid transparent;
+  padding: 44px 38px 44px 16px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(44, 90, 160, 0.15);
+}
+
+.half-circle h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: 1px;
+}
+
+.half-circle h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 18px 0 12px 0;
+  opacity: 0.95;
+}
+
+.half-circle p {
+  max-width: 500px;
+  overflow-wrap: break-word;
+  font-size: 17px;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+.half-circle:hover {
+  transform: translateY(calc(8% - 15px));
+  box-shadow: 0 8px 20px rgba(44, 90, 160, 0.12);
+  border-color: #000000;
+}

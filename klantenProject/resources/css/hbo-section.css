@@ -1,0 +1,29 @@
+.white-container-hbo {
+  grid-column: 1 / 3;
+  background: white;
+  padding: 45px 40px;
+  margin-top: 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.white-container-hbo h2 {
+  color: #2c5aa0;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #4a90e2;
+  display: inline-block;
+}
+
+.white-container-hbo h2:first-child {
+  margin-top: 0;
+}
+
+.white-container-hbo p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 15px 0;
+}

@@ -1,0 +1,9 @@
+.blue-bar {
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.15);
+  align-items: end;
+  display: flex;
+}

@@ -1,9 +1,18 @@
 .blue-bar {
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
   color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.15);
-  align-items: end;
+  
+  grid-column: 1 / -1;
+  bottom: 0;
+
+  width: 127%;
+  height: 80px;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px, 50px;
+
+  border-radius: 12px;
 }

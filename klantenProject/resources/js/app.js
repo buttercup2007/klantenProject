@@ -1,9 +1,9 @@
 import './bootstrap'
 import { createApp } from 'vue'
-import Main from './components/Main.vue'
+import App from './components/App.vue'
 import router from './router'
 
-const app = createApp(Main)
+const app = createApp(App)
 
 app.use(router)
 

@@ -85,6 +85,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f6f6fb;
   color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -142,6 +145,7 @@ body {
 
 .layout {
   display: grid;
+  flex: 1;
   grid-template-columns: 320px 1fr 280px;
   gap: 30px;
   padding: 40px;

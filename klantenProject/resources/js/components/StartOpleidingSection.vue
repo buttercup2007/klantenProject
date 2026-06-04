@@ -1,5 +1,5 @@
 <template>
-  <div class="white-container-opleiding.start">
+  <div id="start-opleiding" class="white-container-opleiding.start">
     <h2>Starten met een opleiding</h2>
 
     <p>

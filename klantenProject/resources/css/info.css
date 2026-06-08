@@ -171,6 +171,7 @@ body {
 .white-container-info {
   background: white;
   padding: 45px 40px 45px 420px;
+  width: 135%;
   margin-top: 0;
   border-radius: 12px;
   word-wrap: break-word;

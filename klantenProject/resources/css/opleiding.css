@@ -1,0 +1,83 @@
+.opleiding-root {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 32px;
+}
+
+.blue-bar {
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+  width: 100%;
+  padding: 40px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.blue-bar h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.blue-container-opleiding {
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+  border-radius: 24px;
+  width: 100%;
+  padding: 60px 40px;
+  min-height: 280px;
+  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blue-container-opleiding.start {
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+
+.blue-container-opleiding.overstap {
+  border-radius: 0 0 120px 120px;
+}
+
+.blue-container-opleiding.stop {
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
+.blue-container-opleiding h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.blue-container-opleiding p {
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 17px;
+  margin: 0;
+}
+
+.blue-container-opleiding:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(44, 90, 160, 0.18);
+}
+
+@media (max-width: 1120px) {
+  .blue-container-opleiding {
+    padding: 48px 32px;
+  }
+}
+
+@media (max-width: 840px) {
+  .opleiding-root {
+    grid-template-columns: 1fr;
+  }
+
+  .blue-bar,
+  .blue-container-opleiding {
+    width: 100%;
+    padding: 32px 24px;
+  }
+}

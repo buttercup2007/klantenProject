@@ -24,3 +24,7 @@ Route::get('/validate-quiz-token/{token}', function ($token) {
 
     return response()->json(['valid' => true]);
 });
+
+Route::get('/{any}', function () {
+    return view('home');
+})->where('any', '.*');

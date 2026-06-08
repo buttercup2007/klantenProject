@@ -1,0 +1,46 @@
+<template>
+  <div class="opleiding-root">
+    <div class="blue-bar">
+      <h1>Starten, overstappen en stoppen met een opleiding</h1>
+    </div>
+
+    <div id="start-opleiding" class="blue-container-opleiding start">
+      <h2>Starten met een opleiding</h2>
+
+      <p>
+        Wanneer je begint met een opleiding, kun je mogelijk studiefinanciering aanvragen als je
+        aan de voorwaarden voldoet. Studiefinanciering helpt studenten bij het betalen van
+        kosten zoals lesgeld, boeken en vervoer. De hoogte van de studiefinanciering hangt
+        af van je persoonlijke situatie en het type opleiding dat je volgt. Het is belangrijk
+        om de aanvraag op tijd in te dienen zodat je geen financiële ondersteuning misloopt.
+        Zodra je aanvraag is goedgekeurd, ontvang je maandelijks het bedrag waarop je recht hebt.
+      </p>
+    </div>
+
+    <div id="overstap-opleiding" class="blue-container-opleiding overstap">
+      <h2>Overstappen met een opleiding</h2>
+
+      <p>
+        Als je overstapt naar een andere opleiding, kan dit gevolgen hebben voor je studiefinanciering.
+        In veel gevallen blijft de financiering doorlopen, maar je moet de wijziging wel doorgeven
+        aan de juiste instantie. Het is belangrijk om te controleren of je nieuwe opleiding recht
+        geeft op dezelfde vorm van studiefinanciering. Ook kunnen regels gelden voor de maximale
+        duur waarin je financiering kunt ontvangen. Door wijzigingen snel door te geven voorkom
+        je problemen of terugbetalingen achteraf.
+      </p>
+    </div>
+
+    <div id="stop-opleiding" class="blue-container-opleiding stop">
+      <h2>Stoppen met een opleiding</h2>
+
+      <p>
+        Wanneer je stopt met een opleiding, verandert meestal ook je recht op studiefinanciering.
+        Je moet het stopzetten van je opleiding op tijd melden om te voorkomen dat je te veel
+        geld ontvangt. Ontvang je studiefinanciering terwijl je geen recht meer hebt, dan moet
+        je dit bedrag vaak terugbetalen. In sommige situaties kun je later opnieuw studiefinanciering
+        aanvragen wanneer je weer gaat studeren. Daarom is het verstandig om je goed te laten
+        informeren voordat je definitief stopt met je opleiding.
+      </p>
+    </div>
+  </div>
+</template>

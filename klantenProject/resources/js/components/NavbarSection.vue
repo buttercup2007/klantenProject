@@ -16,8 +16,8 @@
       </div>
     </div>
 
-      <router-link to="/shop">Shop</router-link>
-      <router-link to="/home">Home</router-link>
+      <router-link to="/#hbo-section">Shop</router-link>
+      <router-link to="/#info-section">Home</router-link>
     </div>
   </nav>
 </template>

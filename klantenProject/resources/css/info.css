@@ -134,7 +134,7 @@ body {
   border-radius: 0 0 400px 0;
 
   width: 100%;
-  transform: translateX(0px);
+  transform: translateX(-350px);
 
   padding: 44px 38px 44px 16px;
 
@@ -172,8 +172,9 @@ body {
   background: white;
 
   padding: 45px 40px 45px 340px;
-
-  width: 100%;
+  
+  transform: translateX(-340px);
+  width: 242%;
   border-radius: 12px;
 
   word-wrap: break-word;

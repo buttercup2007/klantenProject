@@ -10,8 +10,9 @@
   grid-column: 1;
 
   background: white;
-
-  width: 300%;
+  
+  transform: translateX(-30px);
+  width: 307%;
 
   padding: 45px 40px;
 
@@ -88,7 +89,7 @@
 
 .hbo-tool {
 
-  background: white;
+  background: rgb(189, 222, 255);
   padding: 30px;
   
   border-radius: 12px;

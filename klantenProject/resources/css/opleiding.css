@@ -55,7 +55,8 @@
 }
 
 .blue-container-opleiding.overstap {
-  border-radius: 0 0 120px 120px;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
 }
 
 .blue-container-opleiding.stop {
@@ -64,15 +65,16 @@
 }
 
 .blue-container-opleiding h2 {
+  text-align: center;
   font-size: 28px;
   margin-bottom: 20px;
 }
 
 .blue-container-opleiding p {
-  max-width: 700px;
+  text-align: center;
   line-height: 1.8;
   font-size: 17px;
-  margin: 0;
+
 }
 
 .blue-container-opleiding:hover {

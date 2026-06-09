@@ -20,21 +20,7 @@ const hboInfo = computed(() => {
 
 <template>
 
-  <div class="hbo-tool">
-  <h2>Doorstroom naar het hbo</h2>
-
-  <p>Wat wil je weten?</p>
-
-  <select v-model="choice">
-    <option value="">Maak een keuze</option>
-    <option value="door">Wat gebeurt er met mijn studiefinanciering?</option>
-    <option value="leen">Kan ik extra lenen?</option>
-    <option value="reis">Wat gebeurt er met mijn OV?</option>
-  </select>
-
-  <p v-if="hboInfo">{{ hboInfo }}</p>
-</div>
-
+  
   <div class="hbo-root">
     <div class="white-container-hbo" id="hbo-section">
       <h2>Doorstromen naar het hbo</h2>
@@ -80,7 +66,9 @@ const hboInfo = computed(() => {
          verschillende opleidingen te vergelijken maak je een beter geïnformeerde keuze. Een passende 
          opleiding vergroot vaak de kans op studiesucces.</p>
     </div>
-
+    
+    <div class="right-column">
+      
     <div class="right-panel-blue">
       <h1>HBO</h1>
       <h2>Wat moet je weten over HBO?</h2>
@@ -93,5 +81,26 @@ const hboInfo = computed(() => {
         een universiteit.
       </p>
     </div>
+
+
+ <div class="hbo-tool-wrapper">
+  <div class="hbo-tool">
+  <h2>Doorstroom naar het hbo</h2>
+
+  <p>Wat wil je weten?</p>
+
+  <select v-model="choice">
+    <option value="">Maak een keuze</option>
+    <option value="door">Wat gebeurt er met mijn studiefinanciering?</option>
+    <option value="leen">Kan ik extra lenen?</option>
+    <option value="reis">Wat gebeurt er met mijn OV?</option>
+  </select>
+
+  <p v-if="hboInfo">{{ hboInfo }}</p>
+  </div>
+  </div>
+
+  </div>
+
   </div>
 </template>

@@ -122,7 +122,7 @@ body {
 }
 
 .info-root {
-  grid-column: 1 / span 2;
+  grid-column: 1;
   display: grid;
   grid-template-columns: minmax(280px, 320px) 1fr;
   gap: 30px;
@@ -134,14 +134,14 @@ body {
   border-radius: 0 0 400px 0;
 
   width: 100%;
-  min-height: 380px;
+  transform: translateX(0px);
 
   padding: 44px 38px 44px 16px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  justify-content: start;
+  
   box-shadow: 0 4px 16px rgba(44, 90, 160, 0.15);
 }
 
@@ -150,6 +150,7 @@ body {
   font-weight: 700;
   margin: 0 0 18px 0;
   letter-spacing: 1px;
+  text-align: top;
 }
 
 .half-circle h2 {

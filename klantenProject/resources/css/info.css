@@ -177,19 +177,6 @@ body {
 
   word-wrap: break-word;
 
-  mask:
-    radial-gradient(
-      circle 320px at 0 0,
-      transparent 320px,
-      black 321px
-    );
-
-  -webkit-mask:
-    radial-gradient(
-      circle 320px at 0 0,
-      transparent 320px,
-      black 321px
-    );
 }
 
 .white-container-info h2 {

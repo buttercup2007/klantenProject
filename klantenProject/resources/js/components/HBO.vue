@@ -1,4 +1,40 @@
+<script setup>
+ import { ref, computed } from 'vue'
+
+const choice = ref('')
+
+const hboInfo = computed(() => {
+  switch (choice.value) {
+    case 'door':
+      return 'Je kunt meestal studiefinanciering behouden, maar voorwaarden kunnen veranderen.'
+    case 'leen':
+      return 'Je kunt extra lenen voor je hbo-opleiding.'
+    case 'reis':
+      return 'Je studentenreisproduct blijft geldig zolang je recht hebt op studiefinanciering.'
+    default:
+      return ''
+  }
+})
+
+</script>
+
 <template>
+
+  <div class="hbo-tool">
+  <h2>Doorstroom naar het hbo</h2>
+
+  <p>Wat wil je weten?</p>
+
+  <select v-model="choice">
+    <option value="">Maak een keuze</option>
+    <option value="door">Wat gebeurt er met mijn studiefinanciering?</option>
+    <option value="leen">Kan ik extra lenen?</option>
+    <option value="reis">Wat gebeurt er met mijn OV?</option>
+  </select>
+
+  <p v-if="hboInfo">{{ hboInfo }}</p>
+</div>
+
   <div class="hbo-root">
     <div class="white-container-hbo" id="hbo-section">
       <h2>Doorstromen naar het hbo</h2>

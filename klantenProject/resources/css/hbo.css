@@ -23,19 +23,6 @@
 
   border-radius: 20px;
 
-  mask:
-    radial-gradient(
-      circle 300px at 100% 50%,
-      transparent 300px,
-      black 301px
-    );
-
-  -webkit-mask:
-    radial-gradient(
-      circle 300px at 100% 50%,
-      transparent 300px,
-      black 301px
-    );
 }
 
 .white-container-hbo h2 {
@@ -97,6 +84,24 @@
   max-width: 500px;
   font-size: 17px;
   line-height: 1.75;
+}
+
+.action-box,
+.hbo-tool {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 2px solid #d6e4ff;
+}
+
+.action-box select,
+.hbo-tool select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1700px) {

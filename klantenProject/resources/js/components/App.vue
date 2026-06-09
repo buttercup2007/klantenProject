@@ -7,6 +7,7 @@ import NavbarSection from './NavbarSection.vue'
 import Info from './Info.vue'
 import HBO from './HBO.vue'
 import Opleiding from './Opleiding.vue'
+import SchuldSimulie from '@/components/SchuldSimulatie.vue'
 
 </script>
 
@@ -17,5 +18,6 @@ import Opleiding from './Opleiding.vue'
     <Info />
     <HBO />
     <Opleiding />
+    <SchuldSimulatie />
   </div>
 </template>

@@ -25,7 +25,7 @@ body {
 }
 
 .nav-title {
-  font-size: 26px;
+  font-size: clamp(18px, 2vw, 26px);
   font-weight: 700;
   color: white;
   letter-spacing: 0.5px;
@@ -68,16 +68,15 @@ body {
 .layout {
   display: grid;
   flex: 1;
-  grid-template-columns: 320px 1fr 280px;
+  grid-template-columns: minmax(280px, 320px) 1fr minmax(240px, 280px);
   gap: 30px;
-  padding: 40px;
+  padding: clamp(20px, 2vw, 40px);
   min-height: calc(100vh - 80px);
   align-items: start;
   max-width: 1600px;
-  margin-left: 0;
-  margin-right: auto;
+  width: 100%;
+  margin: 0 auto;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -125,36 +124,36 @@ body {
 .info-root {
   grid-column: 1 / span 2;
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: minmax(280px, 320px) 1fr;
   gap: 30px;
 }
 
 .half-circle {
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
   color: white;
-  border-radius: 0px 0px 400px 0px;
-  width: 205%;
-  max-height: 380px;
-  transition: transform 0.4s ease;
-  border: 1px solid transparent;
+  border-radius: 0 0 400px 0;
+
+  width: 100%;
+  min-height: 380px;
+
   padding: 44px 38px 44px 16px;
-  margin-top: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+
   box-shadow: 0 4px 16px rgba(44, 90, 160, 0.15);
 }
 
 .half-circle h1 {
-  font-size: 44px;
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   margin: 0 0 18px 0;
   letter-spacing: 1px;
 }
 
 .half-circle h2 {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600;
   margin: 18px 0 12px 0;
   opacity: 0.95;
@@ -163,29 +162,33 @@ body {
 .half-circle p {
   max-width: 500px;
   overflow-wrap: break-word;
-  font-size: 17px;
+  font-size: clamp(14px, 1.5vw, 17px);
   line-height: 1.75;
   opacity: 0.9;
 }
 
 .white-container-info {
   background: white;
-  padding: 45px 40px 45px 420px;
+
+  padding: 45px 40px 45px 340px;
+
   width: 100%;
-  margin-top: 0;
   border-radius: 12px;
+
   word-wrap: break-word;
+
   mask:
     radial-gradient(
-      circle 400px at 0 0,
-      transparent 400px,
-      black 401px
+      circle 320px at 0 0,
+      transparent 320px,
+      black 321px
     );
+
   -webkit-mask:
     radial-gradient(
-      circle 400px at 0 0,
-      transparent 400px,
-      black 401px
+      circle 320px at 0 0,
+      transparent 320px,
+      black 321px
     );
 }
 
@@ -247,6 +250,62 @@ body {
   color: #666;
   font-size: 14px;
   line-height: 1.6;
+}
+
+.simulator {
+  margin: 30px 0;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9fb, #eef4ff);
+  border-radius: 12px;
+  border: 2px solid #d6e4ff;
+}
+
+.simulator h2 {
+  margin-top: 0;
+}
+
+.simulator input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.simulator h3 {
+  color: #2c5aa0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1600px) {
+  .half-circle {
+    width: 180%;
+  }
+
+  .white-container-info {
+    padding-left: 360px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .half-circle {
+    width: 150%;
+  }
+
+  .info-root {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .white-container-info {
+    padding-left: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .half-circle {
+    width: 120%;
+  }
+
+  .white-container-info {
+    padding-left: 220px;
+  }
 }
 
 @media (max-width: 1120px) {

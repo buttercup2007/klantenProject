@@ -2,13 +2,15 @@
 import '../../css/info.css'
 import '../../css/hbo.css'
 import '../../css/opleiding.css'
+import '../../css/quiz.css'
 
 import NavbarSection from './NavbarSection.vue'
 import Info from './Info.vue'
 import HBO from './HBO.vue'
 import Opleiding from './Opleiding.vue'
-import SchuldSimulie from '@/components/SchuldSimulatie.vue'
 
+import SchuldSimulatie from '@/components/SchuldSimulatie.vue'
+import MiniQuiz from '@/components/MiniQuiz.vue'
 </script>
 
 <template>
@@ -18,6 +20,8 @@ import SchuldSimulie from '@/components/SchuldSimulatie.vue'
     <Info />
     <HBO />
     <Opleiding />
+
     <SchuldSimulatie />
+    <MiniQuiz />
   </div>
 </template>

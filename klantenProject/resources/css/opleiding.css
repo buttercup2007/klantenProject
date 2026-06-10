@@ -43,32 +43,39 @@
   cursor: pointer;
 }
 
-.zoomed {
-  transform: scale(1.15);
-  box-shadow: 0 0 40px rgba(255, 255, 255, .5);
-}
-
-.blue-container-opleiding.zoomed {
-  transform: scale(1.1);
-  z-index: 10;
-  position: relative;
-}
-
 .blue-container-opleiding.start.zoomed {
-   transform: translateY(-250px) scale(1.25);
-   z-index: 100;
-   position: relative;
-   box-shadow: 0 0 40px rgba(255,255,255,.5);
-}
-
-.blue-container-opleiding.overstap.zoomed,
-.blue-container-opleiding.stop.zoomed {
- transform: scale(1.25);
+  transform: translateY(-120px) scale(1.15);
 
   z-index: 100;
   position: relative;
 
   box-shadow: 0 0 40px rgba(255,255,255,.5);
+
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+
+.blue-container-opleiding.overstap.zoomed {
+  transform: translateY(-120px) scale(1.15);
+
+  z-index: 100;
+  position: relative;
+
+  box-shadow: 0 0 40px rgba(255,255,255,.5);
+
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+.blue-container-opleiding.stop.zoomed {
+  transform: translateY(-120px) scale(1.15);
+
+  z-index: 100;
+  position: relative;
+
+  box-shadow: 0 0 40px rgba(255,255,255,.5);
+
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
 }
 
 

@@ -7,24 +7,17 @@ const finished = ref(false)
 
 const questions = [
   {
-    question: 'Heb je recht op studiefinanciering op MBO niveau 2?',
+    question: "Wat is studiefinanciering?",
     answers: [
-      { text: 'Ja', correct: true },
-      { text: 'Nee', correct: false }
+      { text: "Een lening/studiebeurs van de overheid", correct: true },
+      { text: "Een baan bij DUO", correct: false }
     ]
   },
   {
-    question: 'Moet je je studentenreisproduct stopzetten als je stopt met school?',
+    question: "Moet je studiefinanciering terugbetalen?",
     answers: [
-      { text: 'Ja', correct: true },
-      { text: 'Nee', correct: false }
-    ]
-  },
-  {
-    question: 'Moet je een lening bij DUO altijd terugbetalen?',
-    answers: [
-      { text: 'Ja', correct: true },
-      { text: 'Nee', correct: false }
+      { text: "Altijd", correct: false },
+      { text: "Soms, afhankelijk van je situatie", correct: true }
     ]
   }
 ]
@@ -34,7 +27,7 @@ const currentQuestion = computed(() => questions[step.value])
 function answerQuestion(isCorrect) {
   if (isCorrect) score.value++
 
-  if (step.value < questions.length - 1) {
+  if (step.value + 1 < questions.length) {
     step.value++
   } else {
     finished.value = true
@@ -49,7 +42,19 @@ function restartQuiz() {
 </script>
 
 <template>
-  <div class="quiz-box">
+
+  <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebar-1">
+  Toggle Sidebar
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-1">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Sidebar</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+     <div class="quiz-box">
     <h2> Mini Quiz</h2>
 
     <div v-if="!finished">
@@ -83,4 +88,7 @@ function restartQuiz() {
       <button @click="restartQuiz">Opnieuw doen</button>
     </div>
   </div>
+  </div>
+</div>
+
 </template>

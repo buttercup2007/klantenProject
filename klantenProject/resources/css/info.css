@@ -183,7 +183,7 @@ body {
 
 .white-container-info h2 {
   color: #2c5aa0;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 600;
   margin: 25px 0 15px 0;
   padding-bottom: 10px;
@@ -261,6 +261,19 @@ body {
 .simulator h3 {
   color: #2c5aa0;
   margin-bottom: 0;
+}
+
+.choice-card {
+  background: rgb(189, 222, 255);
+  padding: 30px;
+  
+  border-radius: 12px;
+  border: 2px solid #d6e4ff;
+
+  width: 80%;
+  
+  
+  transform: translateX(-350px);
 }
 
 @media (max-width: 1600px) {

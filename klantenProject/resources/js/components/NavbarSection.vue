@@ -5,6 +5,7 @@
     <div class="nav-links">
       <a href="#info-section">Info</a>
       <a href="#hbo-section">HBO</a>
+      <a href="#shop">Shop</a>
 
       <div class="dropdown">
         <span class="dropbtn">Opleiding</span>

@@ -8,8 +8,9 @@
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
   color: white;
 
-  width: 100%;
+  width: 146%;
   margin-top: 50px;
+  margin-left: -350px;
 
   padding: 40px 20px;
 
@@ -29,58 +30,77 @@
 
 .blue-container-opleiding {
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
-
   color: white;
 
   border-radius: 24px;
-
   width: 100%;
-
-  padding: clamp(32px, 4vw, 60px)
-           clamp(24px, 4vw, 40px);
-
+  padding: clamp(32px, 4vw, 60px) clamp(24px, 4vw, 40px);
   min-height: 280px;
 
-  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.15);
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.5s ease;
+  box-shadow: 0.5s ease;
+  cursor: pointer;
 }
 
-.blue-container-opleiding.start {
-   border-radius: 0 0 400px 400px;
-   justify-content: center;
-   align-items: center;
+.zoomed {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px rgba(255, 255, 255, .5);
 }
 
-.blue-container-opleiding.overstap {
-  border-top-left-radius: 300px;
-  border-bottom-left-radius: 300px;
+.blue-container-opleiding.zoomed {
+  transform: scale(1.1);
+  z-index: 10;
+  position: relative;
 }
 
-.blue-container-opleiding.stop {
-  border-top-right-radius: 300px;
-  border-bottom-right-radius: 300px;
+.blue-container-opleiding.start.zoomed {
+   transform: translateY(-250px) scale(1.25);
+   z-index: 100;
+   position: relative;
+   box-shadow: 0 0 40px rgba(255,255,255,.5);
 }
+
+.blue-container-opleiding.overstap.zoomed,
+.blue-container-opleiding.stop.zoomed {
+ transform: scale(1.25);
+
+  z-index: 100;
+  position: relative;
+
+  box-shadow: 0 0 40px rgba(255,255,255,.5);
+}
+
 
 .blue-container-opleiding h2 {
   text-align: center;
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
 .blue-container-opleiding p {
   text-align: center;
-  line-height: 1.8;
-  font-size: 17px;
+  line-height: 1.5;
+  font-size: 30px;
 
 }
 
-.blue-container-opleiding:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(44, 90, 160, 0.18);
+.action-box {
+  background: rgb(189, 222, 255);
+  padding: 30px;
+
+  border-radius: 12px;
+  border: 2px solid #d6e4ff;
+
+  width: 20%;
+  height: 250px;
+
+  margin-top: -30px;
+  margin-left: -360px;
+
+  transform: translate(-380px, -119px);
 }
+
 
 @media (max-width: 1600px) {
   .blue-bar {

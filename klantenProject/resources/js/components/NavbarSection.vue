@@ -3,21 +3,47 @@
     <div class="nav-title">student financiering</div>
 
     <div class="nav-links">
-      <router-link to="/#info-section">Info</router-link>
-      <router-link to="/#hbo-section">HBO</router-link>
+      <a href="#info-section">Info</a>
+      <a href="#hbo-section">HBO</a>
 
-    <div class="dropdown">
-      <span class="dropbtn">Opleiding</span>
+      <div class="dropdown">
+        <span class="dropbtn">Opleiding</span>
 
-      <div class="dropdown-content">
-        <router-link to="/#start-opleiding">Starten</router-link>
-        <router-link to="/#overstap-opleiding">Overstappen</router-link>
-        <router-link to="/#stop-opleiding">Stoppen</router-link>
+        <div class="dropdown-content">
+          <a href="#" @click.prevent="zoomToSection('start-opleiding')">
+            Starten
+          </a>
+
+          <a href="#" @click.prevent="zoomToSection('overstap-opleiding')">
+            Overstappen
+          </a>
+
+          <a href="#" @click.prevent="zoomToSection('stop-opleiding')">
+            Stoppen
+          </a>
+        </div>
       </div>
-    </div>
 
-      <router-link to="/#hbo-section">Shop</router-link>
-      <router-link to="/#info-section">Home</router-link>
+      <a href="#info-section">Home</a>
     </div>
   </nav>
 </template>
+
+<script setup>
+function zoomToSection(id) {
+  const section = document.getElementById(id)
+
+  if (!section) return
+
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  })
+
+  section.classList.add('zoomed')
+
+  setTimeout(() => {
+    section.classList.remove('zoomed')
+  }, 1500)
+}
+</script>

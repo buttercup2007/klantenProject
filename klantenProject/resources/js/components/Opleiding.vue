@@ -2,6 +2,12 @@
 import { ref, computed } from 'vue'
 
 const action = ref('')
+const activeZoom = ref('')
+
+function toggleZoom(section) {
+  activeZoom.value =
+    activeZoom.value === section ? '' : section
+}
 
 const info = computed(() => {
   switch (action.value) {
@@ -15,7 +21,6 @@ const info = computed(() => {
       return ''
   }
 })
-
 </script>
 
 <template>
@@ -25,20 +30,19 @@ const info = computed(() => {
     </div>
 
     <div class="action-box">
-     <h2>Wat gebeurt er met je studiefinanciering?</h2>
+      <h2>Wat gebeurt er met je studiefinanciering?</h2>
 
-     <select v-model="action">
-      <option value="">Kies een situatie</option>
-      <option value="start">Ik begin met een opleiding</option>
-      <option value="overstap">Ik stap over</option>
-      <option value="stop">Ik stop</option>
-     </select>
-
+      <select v-model="action">
+        <option value="">Kies een situatie</option>
+        <option value="start">Ik begin met een opleiding</option>
+        <option value="overstap">Ik stap over</option>
+        <option value="stop">Ik stop</option>
+      </select>
 
       <p v-if="info">{{ info }}</p>
     </div>
 
-    <div id="start-opleiding" class="blue-container-opleiding start">
+    <div id="start-opleiding" class="blue-container-opleiding start" :class="{ zoomed: activeZoom === 'start' }"@click="toggleZoom('start')">
       <h2>Starten met een opleiding</h2>
 
       <p>
@@ -51,7 +55,7 @@ const info = computed(() => {
       </p>
     </div>
 
-    <div id="overstap-opleiding" class="blue-container-opleiding overstap">
+    <div id="overstap-opleiding" class="blue-container-opleiding overstap" :class="{ zoomed: activeZoom === 'overstap' }"@click="toggleZoom('overstap')">
       <h2>Overstappen met een opleiding</h2>
 
       <p>
@@ -64,7 +68,7 @@ const info = computed(() => {
       </p>
     </div>
 
-    <div id="stop-opleiding" class="blue-container-opleiding stop">
+    <div id="stop-opleiding" class="blue-container-opleiding stop" :class="{ zoomed: activeZoom === 'stop' }"@click="toggleZoom('stop')">
       <h2>Stoppen met een opleiding</h2>
 
       <p>

@@ -10,7 +10,6 @@ import Info from './Info.vue'
 import HBO from './HBO.vue'
 import Opleiding from './Opleiding.vue'
 
-import SchuldSimulatie from '@/components/SchuldSimulatie.vue'
 import miniQuiz from '@/components/miniQuiz.vue'
 </script>
 
@@ -21,7 +20,6 @@ import miniQuiz from '@/components/miniQuiz.vue'
     <Info />
     <HBO />
     <Opleiding />
-    <SchuldSimulatie />
     <miniQuiz />
   </div>
 </template>

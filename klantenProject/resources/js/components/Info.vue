@@ -55,6 +55,7 @@ const totalDebt = computed(() => {
     </div>
 
     <div class="white-container-info">
+    <div class="hbo-text">
       <h2>Welke vormen van studiefinanciering zijn er?</h2>
 
       <p>
@@ -89,7 +90,9 @@ const totalDebt = computed(() => {
         daarom belangrijk om goed na te denken over hoeveel je leent.
       </p>
 
-      <!-- Schuld Simulator -->
+      
+
+      <!-- Schuld Simulator in info -->
       <div class="simulator">
         <h2> Schuld Simulator</h2>
 
@@ -152,6 +155,7 @@ const totalDebt = computed(() => {
           <p>Gratis of goedkoper reizen met het OV.</p>
         </div>
       </div>
+     </div>
     </div>
   </div>
 </template>

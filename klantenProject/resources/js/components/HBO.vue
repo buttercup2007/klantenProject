@@ -89,7 +89,7 @@ const hboInfo = computed(() => {
 
   <p>Wat wil je weten?</p>
 
-  <select v-model="choice">
+  <select v-model="choice" class="dropdown">
     <option value="">Maak een keuze</option>
     <option value="door">Wat gebeurt er met mijn studiefinanciering?</option>
     <option value="leen">Kan ik extra lenen?</option>

@@ -100,11 +100,16 @@
   transform: translateX(100px);
 }
 
+
 .right-column {
   
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.hbo-text {
+  align-items: start;
 }
 
 @media (max-width: 1700px) {

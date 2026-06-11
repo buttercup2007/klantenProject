@@ -269,12 +269,38 @@ body {
   
   border-radius: 12px;
   border: 2px solid #d6e4ff;
-
-  width: 80%;
   
+  height: 224px;
+  width: 150%;
+  margin-top: -10px;
   
   transform: translateX(-350px);
 }
+
+.choice-card  h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #2c5aa0;
+}
+
+.choice-card select {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  font-size: 16px;
+  background: white;
+}
+
+.choice-card  p {
+  margin-top: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
 
 @media (max-width: 1600px) {
   .half-circle {

@@ -21,6 +21,11 @@ const info = computed(() => {
       return ''
   }
 })
+
+function toggleZoom(section) {
+  activeZoom.value =
+    activeZoom.value === section ? '' : section
+}
 </script>
 
 <template>
@@ -68,7 +73,8 @@ const info = computed(() => {
       </p>
     </div>
 
-    <div id="stop-opleiding" class="blue-container-opleiding stop" :class="{ zoomed: activeZoom === 'stop' }"@click="toggleZoom('stop')">
+     <div id="stop-opleiding" class="blue-container-opleiding stop" :class="{ zoomed: activeZoom === 'stop' }" @click="toggleZoom('stop')"
+>
       <h2>Stoppen met een opleiding</h2>
 
       <p>

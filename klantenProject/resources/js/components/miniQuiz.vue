@@ -13,6 +13,31 @@ const questions = [
       { text: "Een baan bij DUO", correct: false }
     ]
   },
+
+  {
+    question: "Wie heeft recht op studentfinanciering?",
+    answers: [
+      { text: "Studenten die een erkende mbo-, hbo- of universitaire opleiding volgen en aan de voorwaarden voldoen.", correct: true },
+      { text: "Studenten die op de middle bare zitten.", correct: false }
+    ]
+  },
+
+    {
+    question: "Wat is een aanvullend beurs",
+    answers: [
+      { text: "Dat is extra geld voor studenten van wie de ouders een lager inkomen hebben.", correct: true },
+      { text: "Dat is geld voor studenten die moeite hebben met het mbo. ", correct: false }
+    ]
+  },
+
+    {
+    question: "Krijgen studenten ook een OV-kaart",
+    answers: [
+      { text: "Ja, veel studenten hebben recht op een studentenreisproduct waarmee zij gratis of met korting kunnen reizen.", correct: true },
+      { text: "ja, maar studenten kunnen niet gratis of met korting rijzen", correct: false }
+    ]
+  },
+
   {
     question: "Moet je studiefinanciering terugbetalen?",
     answers: [
@@ -43,13 +68,21 @@ function restartQuiz() {
 
 <template>
 
-  <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebar-1">
-  Toggle Sidebar
-</button>
+  <div class="quiz-button-wrapper">
+  <button
+    class="quiz-open-btn"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidebar-1"
+    aria-controls="sidebar-1"
+  >
+    Maak de quiz om te zien of je alles weet over studiefinanciering!
+  </button>
+</div>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-1">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Sidebar</h5>
+    <h5 class="offcanvas-title">Quiz</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
 
@@ -70,7 +103,7 @@ function restartQuiz() {
         </button>
       </div>
 
-      <p>Vraag {{ step + 1 }} / {{ questions.length }}</p>
+      <p>Vraag {{ step + 1 }} / {{ questions.length}}</p>
     </div>
 
     <div v-else>
@@ -82,7 +115,7 @@ function restartQuiz() {
       </p>
 
       <p v-else>
-        Goed bezig! Je weet al veel, maar nog niet alles.
+         Je weet al veel, maar nog niet alles.
       </p>
 
       <button @click="restartQuiz">Opnieuw doen</button>

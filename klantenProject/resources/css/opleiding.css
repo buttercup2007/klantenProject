@@ -1,21 +1,22 @@
 .opleiding-root {
   grid-column: 1 / -1;
   display: grid;
-  gap: 32px;
-  
+  gap: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .blue-bar {
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
   color: white;
 
-  width: 146%;
-  margin-top: 50px;
-  margin-left: -350px;
-
+  width: 219%;
   padding: 40px 20px;
+  transform: translateX(-600px);
 
-  border-radius: 12px;
+  border-radius: 16px;
 
   display: flex;
   justify-content: center;
@@ -25,8 +26,46 @@
 
 .blue-bar h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: clamp(24px, 3vw, 38px);
   font-weight: 700;
+}
+
+.action-box {
+  background: rgb(189, 222, 255);
+
+  border: 2px solid #d6e4ff;
+  border-radius: 16px;
+
+  padding: 24px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.action-box h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #2c5aa0;
+}
+
+.action-box select {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  font-size: 16px;
+  background: white;
+}
+
+.action-box p {
+  margin-top: 15px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .blue-container-opleiding {
@@ -34,114 +73,85 @@
   color: white;
 
   border-radius: 24px;
-  width: 100%;
-  padding: clamp(32px, 4vw, 60px) clamp(24px, 4vw, 40px);
-  min-height: 280px;
 
+  width: 150%;
+  box-sizing: border-box;
 
-  transition: all 0.5s ease;
-  box-shadow: 0.5s ease;
+  padding: clamp(32px, 4vw, 60px);
+  height: 500px;
+  
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease,
+    border-radius 0.5s ease;
+
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+
+  margin-left: -250px;
+
   cursor: pointer;
 }
 
-.blue-container-opleiding.start.zoomed {
-  transform: translateY(-120px) scale(1.15);
 
-  z-index: 100;
-  position: relative;
-
-  box-shadow: 0 0 40px rgba(255,255,255,.5);
-
-  border-bottom-right-radius: 300px;
-  border-bottom-left-radius: 300px;
+.blue-container-opleiding:hover {
+  transform: translateY(-5px);
 }
 
-.blue-container-opleiding.overstap.zoomed {
-  transform: translateY(-120px) scale(1.15);
 
-  z-index: 100;
+.blue-container-opleiding.zoomed {
+  transform: scale(1.12);
   position: relative;
-
-  box-shadow: 0 0 40px rgba(255,255,255,.5);
-
-  border-bottom-right-radius: 300px;
-  border-bottom-left-radius: 300px;
+  z-index: 9999;
 }
-.blue-container-opleiding.stop.zoomed {
-  transform: translateY(-120px) scale(1.15);
-
-  z-index: 100;
-  position: relative;
-
-  box-shadow: 0 0 40px rgba(255,255,255,.5);
-
-  border-bottom-right-radius: 300px;
-  border-bottom-left-radius: 300px;
-}
-
 
 .blue-container-opleiding h2 {
   text-align: center;
-  font-size: 50px;
+
+  font-size: clamp(28px, 3vw, 48px);
+
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .blue-container-opleiding p {
   text-align: center;
-  line-height: 1.5;
-  font-size: 30px;
 
+  line-height: 1.7;
+
+  font-size: clamp(16px, 1.3vw, 24px);
+
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.action-box {
-  background: rgb(189, 222, 255);
-  padding: 30px;
-
-  border-radius: 12px;
-  border: 2px solid #d6e4ff;
-
-  width: 20%;
-  height: 250px;
-
-  margin-top: -30px;
-  margin-left: -360px;
-
-  transform: translate(-380px, -119px);
-}
-
-
-@media (max-width: 1600px) {
-  .blue-bar {
-    width: 130%;
-  }
-}
-
-@media (max-width: 1400px) {
-  .blue-bar {
-    width: 115%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .blue-bar {
-    width: 100%;
-  }
-}
 
 @media (max-width: 1120px) {
   .blue-container-opleiding {
-    padding: 48px 32px;
+    padding: 40px 30px;
   }
 }
 
 @media (max-width: 840px) {
   .opleiding-root {
-    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 15px;
   }
 
-  .blue-bar,
+  .blue-bar {
+    padding: 30px 20px;
+  }
+
   .blue-container-opleiding {
-    width: 100%;
-    padding: 32px 24px;
+    padding: 30px 20px;
+  }
+
+  .action-box {
+    padding: 20px;
+  }
+
+  .blue-container-opleiding.zoomed {
+    transform: scale(1.04);
   }
 }

@@ -21,11 +21,6 @@ const info = computed(() => {
       return ''
   }
 })
-
-function toggleZoom(section) {
-  activeZoom.value =
-    activeZoom.value === section ? '' : section
-}
 </script>
 
 <template>

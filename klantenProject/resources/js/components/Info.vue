@@ -27,15 +27,19 @@ const totalDebt = computed(() => {
 
 <template>
   <div class="choice-card">
+    <h1>Welkom MBO student</h1>
     <h2>Wat is jouw situatie?</h2>
-
+   
+   <div class="text-choice-card">
     <select v-model="situation">
       <option value="">Maak een keuze</option>
+      <option value="">Ik will studie finnancing</option>
       <option value="start">Ik ga starten</option>
       <option value="switch">Ik stap over</option>
       <option value="stop">Ik stop met mijn opleiding</option>
       <option value="hbo">Ik ga naar het hbo</option>
     </select>
+    </div>
 
     <p v-if="result">{{ result }}</p>
   </div>

@@ -287,50 +287,6 @@ body {
 
   align-items: center;
 }
-
-.choice-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 30px;
-  align-items: center;
-}
-
-.choice-buttons button {
-   display: flex;
-  flex-direction: row;   /* force horizontal */
-  justify-content: center;
-  align-items: center;
-
-  gap: 16px;
-  margin-top: 25px;
-
-  flex-wrap: nowrap; 
-
-  max-width: 260px;
-
-  padding: 18px 16px;
-  border: none;
-  border-radius: 14px;
-
-  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
-  color: white;
-
-  font-size: 16px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  box-shadow: 0 6px 18px rgba(44, 90, 160, 0.25);
-  transition: all 0.25s ease;
-
-  text-align: center;
-}
-
-.choice-buttons button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(44, 90, 160, 0.35);
-}
 .choice-card h1 {
   margin-top: 0;
   margin-bottom: 15px;
@@ -372,6 +328,79 @@ body {
   font-size: 50px;
 }
 
+.choice-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 25px;
+  margin-top: 250px;
+  margin-left: -150px;
+  padding: 20px;
+
+  flex-wrap: nowrap;   /* keeps them in one line */
+}
+
+/* MAIN BUTTON STYLE */
+.choice-buttons button {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+
+  animation: popIn 0.6s ease forwards;
+
+  padding: 18px 26px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(44, 90, 160, 0.2);
+  transition: all 0.25s ease;
+}
+
+
+
+/* HOVER LIFT */
+.choice-buttons button:hover {
+  transform: translateY(-10px) scale(2.00);
+  box-shadow: 0 16px 30px rgba(44, 90, 160, 0.35);
+}
+
+/* CLICK EFFECT */
+.choice-buttons button:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.choice-buttons button:hover::before {
+  left: 130%;
+}
+
+.choice-buttons button:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.choice-buttons button:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.choice-buttons button:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.choice-buttons button:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.choice-buttons button:nth-child(5) {
+  animation-delay: 0.7s;
+}
 
 @media (max-width: 1600px) {
   .half-circle {
@@ -473,5 +502,16 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

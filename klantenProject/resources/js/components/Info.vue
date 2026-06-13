@@ -2,22 +2,20 @@
 import { ref, computed, onMounted } from 'vue'
 
 const situation = ref('')
-const selected = ref('') // ✅ FIX
+const selected = ref('') 
 
 const showButtons = ref(false)
 
-function selectSituation(btn) {
-  selected.value = btn
-  situation.value = btn
-}
+function goToSection(id) {
+  const section = document.getElementById(id)
 
-const buttons = [
-  'Ik wil studiefinanciering',
-  'Ik ga starten',
-  'Ik stap over',
-  'Ik stop met mijn opleiding',
-  'Ik ga naar het HBO'
-]
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 
 onMounted(() => {
   setTimeout(() => {
@@ -37,20 +35,29 @@ const totalDebt = computed(() => {
   <div class="choice-card">
     <h1 class="hero-title">Welkom MBO student</h1>
     <h2 class="hero-subtitle">Wat is jouw situatie?</h2>
-   
-   <div class="choice-buttons">
-    <button
-  v-for="(btn, i) in buttons"
-  :key="i"
-  class="choice-buttons-btn"
-  :class="{ show: showButtons }"
-  :style="{ transitionDelay: i * 0.15 + 's' }"
-  @click="selectSituation(btn)"
->
-  {{ btn }}
-</button>
-</div>
   </div>
+
+  <div class="choice-buttons">
+  <button @click="goToSection('info-section')">
+    Ik wil studiefinanciering
+  </button>
+
+  <button @click="goToSection('start-opleiding')">
+    Ik ga starten
+  </button>
+
+  <button @click="goToSection('overstap-opleiding')">
+    Ik stap over
+  </button>
+
+  <button @click="goToSection('stop-opleiding')">
+    Ik stop met mijn opleiding
+  </button>
+
+  <button @click="goToSection('hbo-section')">
+    Ik ga naar het HBO
+  </button>
+</div>
 
   <div class="info-root">
     <div class="half-circle" id="info-section">

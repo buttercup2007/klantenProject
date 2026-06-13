@@ -1,21 +1,28 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 
 const situation = ref('')
+const selected = ref('') // ✅ FIX
 
-const result = computed(() => {
-  switch (situation.value) {
-    case 'start':
-      return 'Bekijk hoe je studiefinanciering aanvraagt en waar je recht op hebt.'
-    case 'switch':
-      return 'Controleer wat een overstap betekent voor je studiefinanciering.'
-    case 'stop':
-      return 'Lees wat er gebeurt met je beurs, lening en reisproduct.'
-    case 'hbo':
-      return 'Ontdek wat verandert als je doorstroomt naar het hbo.'
-    default:
-      return ''
-  }
+const showButtons = ref(false)
+
+function selectSituation(btn) {
+  selected.value = btn
+  situation.value = btn
+}
+
+const buttons = [
+  'Ik wil studiefinanciering',
+  'Ik ga starten',
+  'Ik stap over',
+  'Ik stop met mijn opleiding',
+  'Ik ga naar het HBO'
+]
+
+onMounted(() => {
+  setTimeout(() => {
+    showButtons.value = true
+  }, 300)
 })
 
 const monthlyLoan = ref(200)
@@ -25,23 +32,24 @@ const totalDebt = computed(() => {
 })
 </script>
 
+
 <template>
   <div class="choice-card">
-    <h1>Welkom MBO student</h1>
-    <h2>Wat is jouw situatie?</h2>
+    <h1 class="hero-title">Welkom MBO student</h1>
+    <h2 class="hero-subtitle">Wat is jouw situatie?</h2>
    
-   <div class="text-choice-card">
-    <select v-model="situation">
-      <option value="">Maak een keuze</option>
-      <option value="">Ik will studie finnancing</option>
-      <option value="start">Ik ga starten</option>
-      <option value="switch">Ik stap over</option>
-      <option value="stop">Ik stop met mijn opleiding</option>
-      <option value="hbo">Ik ga naar het hbo</option>
-    </select>
-    </div>
-
-    <p v-if="result">{{ result }}</p>
+   <div class="choice-buttons">
+    <button
+  v-for="(btn, i) in buttons"
+  :key="i"
+  class="choice-buttons-btn"
+  :class="{ show: showButtons }"
+  :style="{ transitionDelay: i * 0.15 + 's' }"
+  @click="selectSituation(btn)"
+>
+  {{ btn }}
+</button>
+</div>
   </div>
 
   <div class="info-root">

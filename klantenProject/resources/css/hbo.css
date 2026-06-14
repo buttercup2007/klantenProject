@@ -12,7 +12,7 @@
   background: white;
   
   transform: translateX(-30px);
-  width: 307%;
+  width: 194%;
 
   padding: 45px 40px;
 
@@ -46,11 +46,11 @@
   color: white;
   border-radius: 400px 0 0px 0;
 
-  width: 59%;
+  width: 52%;
   height: 750px;
 
   padding: 44px 38px 44px 16px;
-  margin-left: 957px;
+  margin-left: 700px;
 
   display: flex;
   flex-direction: column;
@@ -95,10 +95,9 @@
   border: 2px solid #d6e4ff;
   
   height: 224px;
-  width: 60%;
+  width: 52.5%;
   margin-top: -10px;
-  
-  transform: translateX(100px);
+  margin-right: 205px;
 }
 
 .hbo-tool h2 {

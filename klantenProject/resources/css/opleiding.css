@@ -30,44 +30,6 @@
   font-weight: 700;
 }
 
-.action-box {
-  background: rgb(189, 222, 255);
-
-  border: 2px solid #d6e4ff;
-  border-radius: 16px;
-
-  padding: 24px;
-
-  width: 100%;
-  box-sizing: border-box;
-
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.action-box h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: #2c5aa0;
-}
-
-.action-box select {
-  width: 100%;
-  padding: 12px;
-
-  border: 1px solid #ccc;
-  border-radius: 10px;
-
-  font-size: 16px;
-  background: white;
-}
-
-.action-box p {
-  margin-top: 15px;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
 .blue-container-opleiding {
   background: linear-gradient(135deg, #2c5aa0, #4a90e2);
   color: white;
@@ -145,10 +107,6 @@
 
   .blue-container-opleiding {
     padding: 30px 20px;
-  }
-
-  .action-box {
-    padding: 20px;
   }
 
   .blue-container-opleiding.zoomed {

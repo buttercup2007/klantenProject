@@ -9,37 +9,12 @@ function toggleZoom(section) {
     activeZoom.value === section ? '' : section
 }
 
-const info = computed(() => {
-  switch (action.value) {
-    case 'start':
-      return 'Je kunt studiefinanciering aanvragen en mogelijk recht hebben op basisbeurs en OV.'
-    case 'overstap':
-      return 'Je studiefinanciering blijft meestal doorlopen, maar je moet je nieuwe opleiding doorgeven bij DUO.'
-    case 'stop':
-      return 'Je studiefinanciering stopt. Je OV moet je stopzetten om boetes te voorkomen.'
-    default:
-      return ''
-  }
-})
 </script>
 
 <template>
   <div class="opleiding-root">
     <div class="blue-bar">
       <h1>Starten, overstappen en stoppen met een opleiding</h1>
-    </div>
-
-    <div class="action-box">
-      <h2>Wat gebeurt er met je studiefinanciering?</h2>
-
-      <select v-model="action">
-        <option value="">Kies een situatie</option>
-        <option value="start">Ik begin met een opleiding</option>
-        <option value="overstap">Ik stap over</option>
-        <option value="stop">Ik stop</option>
-      </select>
-
-      <p v-if="info">{{ info }}</p>
     </div>
 
     <div id="start-opleiding" class="blue-container-opleiding start" :class="{ zoomed: activeZoom === 'start' }"@click="toggleZoom('start')">

@@ -17,18 +17,24 @@ function toggleZoom(section) {
       <h1>Starten, overstappen en stoppen met een opleiding</h1>
     </div>
 
-    <div id="start-opleiding" class="blue-container-opleiding start" :class="{ zoomed: activeZoom === 'start' }"@click="toggleZoom('start')">
-      <h2>Starten met een opleiding</h2>
+    <div id="start-opleiding" class="blue-container-opleiding start"
+     :class="{ zoomed: activeZoom === 'start' }"
+     @click="toggleZoom('start')">
 
-      <p>
-        Wanneer je begint met een opleiding, kun je mogelijk studiefinanciering aanvragen als je
-        aan de voorwaarden voldoet. Studiefinanciering helpt studenten bij het betalen van
-        kosten zoals lesgeld, boeken en vervoer. De hoogte van de studiefinanciering hangt
-        af van je persoonlijke situatie en het type opleiding dat je volgt. Het is belangrijk
-        om de aanvraag op tijd in te dienen zodat je geen financiële ondersteuning misloopt.
-        Zodra je aanvraag is goedgekeurd, ontvang je maandelijks het bedrag waarop je recht hebt.
-      </p>
-    </div>
+  <h2>Starten met een opleiding</h2>
+
+  <ol class="study-steps">
+    <li>Kies een erkende mbo-, hbo- of universitaire opleiding.</li>
+    <li>Controleer of je voldoet aan de voorwaarden voor studiefinanciering.</li>
+    <li>Vraag een DigiD aan als je deze nog niet hebt.</li>
+    <li>Log in bij DUO en vraag studiefinanciering aan.</li>
+    <li>Controleer of je recht hebt op een studentenreisproduct.</li>
+    <li>Dien je aanvraag op tijd in vóór de start van je opleiding.</li>
+    <li>Wacht op de goedkeuring van DUO.</li>
+    <li>Ontvang maandelijks je studiefinanciering.</li>
+  </ol>
+
+  </div>
 
     <div id="overstap-opleiding" class="blue-container-opleiding overstap" :class="{ zoomed: activeZoom === 'overstap' }"@click="toggleZoom('overstap')">
       <h2>Overstappen met een opleiding</h2>

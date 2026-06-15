@@ -2,11 +2,20 @@
 import { ref, computed, onMounted } from 'vue'
 
 const situation = ref('')
-const selected = ref('') 
-
+const selected = ref('')
 const showButtons = ref(false)
 
+function disableScroll() {
+  document.body.style.overflow = 'hidden'
+}
+
+function enableScroll() {
+  document.body.style.overflow = 'auto'
+}
+
 function goToSection(id) {
+  enableScroll()
+
   const section = document.getElementById(id)
 
   if (section) {
@@ -18,6 +27,8 @@ function goToSection(id) {
 }
 
 onMounted(() => {
+  disableScroll()
+
   setTimeout(() => {
     showButtons.value = true
   }, 300)

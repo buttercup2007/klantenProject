@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 700px;
   gap: 30px;
   align-items: start;
+  
 }
 
 .white-container-hbo {
@@ -47,7 +48,7 @@
   border-radius: 400px 0 0px 0;
 
   width: 52%;
-  height: 750px;
+  height: 890px;
 
   padding: 44px 38px 44px 16px;
   margin-left: 700px;
@@ -94,7 +95,7 @@
   border-radius: 12px;
   border: 2px solid #d6e4ff;
   
-  height: 224px;
+  height: 300px;
   width: 52.5%;
   margin-top: -10px;
   margin-right: 205px;

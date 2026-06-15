@@ -184,7 +184,7 @@ body {
 
 .white-container-info h2 {
   color: #2c5aa0;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   margin: 25px 0 15px 0;
   padding-bottom: 10px;
@@ -199,7 +199,7 @@ body {
 .white-container-info p {
   color: #555;
   line-height: 1.8;
-  font-size: 15px;
+  font-size: 20px;
   margin: 15px 0;
 }
 
@@ -231,14 +231,14 @@ body {
   margin-top: 0;
   margin-bottom: 12px;
   color: #2c5aa0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .card p {
   margin: 0;
   color: #666;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -384,6 +384,30 @@ body {
 
 .choice-buttons button:nth-child(5) {
   animation-delay: 4.00s;
+}
+
+.tooltip-text {
+  background-color: #4a90e2;
+  border-radius: 10px;
+  visibility: hidden;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
 }
 
 @media (max-width: 1600px) {

@@ -6,11 +6,15 @@ const selected = ref('')
 const showButtons = ref(false)
 
 function disableScroll() {
+  document.documentElement.style.overflow = 'hidden'
   document.body.style.overflow = 'hidden'
+  document.body.style.height = '100vh'
 }
 
 function enableScroll() {
-  document.body.style.overflow = 'auto'
+  document.documentElement.style.overflow = ''
+  document.body.style.overflow = ''
+  document.body.style.height = ''
 }
 
 function goToSection(id) {

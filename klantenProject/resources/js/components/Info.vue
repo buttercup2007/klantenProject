@@ -61,29 +61,29 @@ const totalDebt = computed(() => {
   </div>
    
     <div class="tooltip-container btn2">
-  <button @click="goToSection('start-opleiding')">
-    Ik ga starten
+  <button @click="goToSection('hbo-section')">
+    Ik ga naar het HBO
   </button>
   <div class="tooltip-text">Volg deze stappen plan om te gaan starten</div>
   </div>
   
   <div class="tooltip-container btn3">
   <button @click="goToSection('overstap-opleiding')">
-    Ik stap over
+    Hoe activeer ik studiefinancing
   </button>
   <div class="tooltip-text">Lees wat je moet doen als je gaat overstappen</div>
   </div>
   
   <div class="tooltip-container btn4">
   <button @click="goToSection('stop-opleiding')">
-    Ik stop met mijn opleiding
+    Overstappen met een opleiding
   </button>
   <div class="tooltip-text">Lees wat je moet gaan doen als je gaat stoppen</div>
   </div>
   
   <div class="tooltip-container btn5">
   <button @click="goToSection('hbo-section')">
-    Ik ga naar het HBO
+    Stoppen met een opleiding
   </button>
    <div class="tooltip-text">Lees informatie over HBO</div>
   </div>
@@ -139,9 +139,6 @@ const totalDebt = computed(() => {
         daarom belangrijk om goed na te denken over hoeveel je leent.
       </p>
 
-      
-
-      <!-- Schuld Simulator in info -->
       <div class="simulator">
         <h2> Schuld Simulator</h2>
 

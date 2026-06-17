@@ -21,10 +21,6 @@ const stappen = [
 
     <div class="stop-hero">
       <h1>Stoppen met je opleiding</h1>
-      <p>
-        Denk je eraan om te stoppen met je studie? Bekijk eerst wat dit betekent
-        voor je studiefinanciering.
-      </p>
     </div>
 
     <section class="stop-card">

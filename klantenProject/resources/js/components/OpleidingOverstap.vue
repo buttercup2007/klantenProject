@@ -1,4 +1,5 @@
 <script setup>
+
 const stappen = [
   "Check of je huidige opleiding stopt of dat je zelf overstapt",
   "Geef je wijziging door aan DUO",
@@ -30,23 +31,24 @@ const tips = [
     <div class="hero-overstap">
       <h1>Overstappen & Studiefinanciering</h1>
     </div>
-
-    <section class="card">
+   
+ 
+    <div class="card1">
       <h2>Wat gebeurt er met je studiefinanciering?</h2>
       <p>
         Als je overstapt van opleiding kan je studiefinanciering veranderen of tijdelijk stoppen.
         Dit hangt af van of je direct doorgaat met een nieuwe studie en of deze opleiding recht geeft op DUO.
       </p>
-    </section>
+    </div>
 
-    <section class="card">
+    <div class="card2">
       <h2>Mogelijke gevolgen</h2>
       <ul>
         <li v-for="(g, i) in gevolgen" :key="i">{{ g }}</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="card">
+    <div class="boxes-container">
       <h2>Stappen die je moet nemen</h2>
 
       <div class="steps">
@@ -55,23 +57,22 @@ const tips = [
           <p>{{ s }}</p>
         </div>
       </div>
-    </section>
+    </div>
+<div class="card-highlight">
+  <h2>Belangrijke tips</h2>
+  <ul>
+    <li v-for="(t, i) in tips" :key="i">{{ t }}</li>
+  </ul>
+</div>
 
-    <section class="card highlight">
-      <h2>Belangrijke tips</h2>
-      <ul>
-        <li v-for="(t, i) in tips" :key="i">{{ t }}</li>
-      </ul>
-    </section>
+<section class="card warning">
+  <h2>⚠️ Let op</h2>
+  <p>
+    Vergeet niet dat je zelf verantwoordelijk bent voor het aanpassen van je studiefinanciering bij DUO.
+    Als je dit niet op tijd doet, kun je geld terug moeten betalen.
+  </p>
+</section>
 
-    <section class="card warning">
-      <h2>⚠️ Let op</h2>
-      <p>
-        Vergeet niet dat je zelf verantwoordelijk bent voor het aanpassen van je studiefinanciering bij DUO.
-        Als je dit niet op tijd doet, kun je geld terug moeten betalen.
-      </p>
-    </section>
+</div>
 
-
-  </div>
 </template>

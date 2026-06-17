@@ -83,7 +83,7 @@
 
   line-height: 1.7;
 
-  font-size: clamp(16px, 1.3vw, 24px);
+  font-size: clamp(20px, 2.0vw, 30px);
 
   max-width: 900px;
   margin: 0 auto;
@@ -94,7 +94,7 @@
   margin: 20px auto 0;
   text-align: left;
 
-  font-size: clamp(16px, 1.3vw, 24px);
+  font-size: clamp(20px, 1.3vw, 30px);
   line-height: 1.8;
 }
 

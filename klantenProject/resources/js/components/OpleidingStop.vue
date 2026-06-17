@@ -19,7 +19,7 @@ const stappen = [
 <template>
   <div class="stop-container">
 
-    <div class="hero">
+    <div class="stop-hero">
       <h1>Stoppen met je opleiding</h1>
       <p>
         Denk je eraan om te stoppen met je studie? Bekijk eerst wat dit betekent
@@ -27,7 +27,7 @@ const stappen = [
       </p>
     </div>
 
-    <section class="card">
+    <section class="stop-card">
       <h2>Wat gebeurt er met je studiefinanciering?</h2>
       <p>
         Wanneer je stopt met je opleiding, heb je meestal geen recht meer op
@@ -36,7 +36,7 @@ const stappen = [
       </p>
     </section>
 
-    <section class="card">
+    <section class="stop-card-two">
       <h2>Mogelijke gevolgen</h2>
 
       <ul>
@@ -46,18 +46,18 @@ const stappen = [
       </ul>
     </section>
 
-    <section class="card">
+    <section class="stop-card-three">
       <h2>Wat moet je doen?</h2>
 
-      <div class="steps">
-        <div class="step" v-for="(stap, index) in stappen" :key="index">
+      <div class="stop-steps">
+        <div class="stop-step" v-for="(stap, index) in stappen" :key="index">
           <span>{{ index + 1 }}</span>
           <p>{{ stap }}</p>
         </div>
       </div>
     </section>
 
-    <section class="warning">
+    <section class="stop-warning">
       <h2>Belangrijk</h2>
       <p>
         Controleer altijd je persoonlijke situatie bij DUO. De regels rondom

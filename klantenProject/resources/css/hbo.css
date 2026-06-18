@@ -137,6 +137,80 @@
   align-items: start;
 }
 
+.keuzehulp-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  max-width: 900px;
+  margin: 40px auto;
+
+  text-align: center;
+}
+
+.keuzehulp-card h2 {
+  color: #2c5aa0;
+  margin-bottom: 25px;
+}
+
+.vraag p,
+.resultaat p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.buttons button,
+.resultaat button {
+  background: linear-gradient(
+    135deg,
+    #2c5aa0,
+    #4a90e2
+  );
+
+  color: white;
+  border: none;
+
+  padding: 12px 28px;
+
+  border-radius: 12px;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.buttons button:hover,
+.resultaat button:hover {
+  transform: translateY(-3px);
+}
+
+.resultaat {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1700px) {
   .white-container-hbo {
     width: 280%;

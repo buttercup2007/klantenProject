@@ -15,6 +15,7 @@ import OpleidingOverstap from './OpleidingOverstap.vue'
 import OpleidingStop from './OpleidingStop.vue'
 import miniQuiz from '@/components/miniQuiz.vue'
 import Footer from './Footer.vue'
+import HBOKeuzehulp from './HBOKeuzehulp.vue'
 
 </script>
 
@@ -24,6 +25,7 @@ import Footer from './Footer.vue'
   <div class="layout">
     <Info />
     <HBO />
+    <HBOKeuzehulp />
     <OpleidingStart />
     <OpleidingOverstap />
     <OpleidingStop />

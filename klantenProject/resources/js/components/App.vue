@@ -5,8 +5,7 @@ import '../../css/start.css'
 import '../../css/quiz.css'
 import '../../css/overstap.css'
 import '../../css/stop.css'
-
-
+import '../../css/Footer.css'
 
 import NavbarSection from './NavbarSection.vue'
 import Info from './Info.vue'
@@ -15,6 +14,8 @@ import OpleidingStart from './OpleidingStart.vue'
 import OpleidingOverstap from './OpleidingOverstap.vue'
 import OpleidingStop from './OpleidingStop.vue'
 import miniQuiz from '@/components/miniQuiz.vue'
+import Footer from './Footer.vue'
+
 </script>
 
 <template>
@@ -28,4 +29,6 @@ import miniQuiz from '@/components/miniQuiz.vue'
     <OpleidingStop />
     <miniQuiz />
   </div>
+
+  <Footer />
 </template>

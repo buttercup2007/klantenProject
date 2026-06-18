@@ -31,6 +31,17 @@ const stappen = [
       </p>
     </section>
 
+    <section class="stop-card">
+     <h2>Wat gebeurt er met mijn schuld?</h2>
+
+     <p>
+       Stop je met studeren of stap je over?
+       Dan blijft een opgebouwde studieschuld bestaan.
+       Het bedrag dat je hebt geleend moet later
+       worden terugbetaald aan DUO.
+     </p>
+    </section>
+
     <section class="stop-card-two">
       <h2>Mogelijke gevolgen</h2>
 

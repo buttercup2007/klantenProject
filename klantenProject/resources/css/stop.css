@@ -161,6 +161,14 @@
   margin: 0;
 }
 
+.stop-container {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.stop-container.zoomed {
+  transform: scale(1.03);
+}
+
 /* =========================
    RESPONSIVE
 ========================= */

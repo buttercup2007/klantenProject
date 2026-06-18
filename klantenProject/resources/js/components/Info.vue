@@ -47,7 +47,7 @@ const totalDebt = computed(() => {
 
 
 <template>
-  <div class="choice-card">
+  <div id="home-section" class="choice-card">
     <h1 class="hero-title">Welkom MBO student</h1>
     <h2 class="hero-subtitle">Wat is jouw situatie?</h2>
   </div>

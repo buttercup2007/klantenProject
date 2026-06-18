@@ -124,6 +124,14 @@ li {
   font-weight: bold;
 }
 
+.overstap-container {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.overstap-container.zoomed {
+  transform: scale(1.03);
+}
+
 @media (max-width: 768px) {
   .overstap-top-grid {
     grid-template-columns: 1fr;

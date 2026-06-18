@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <a href="#info-section">Home</a>
+      <a href="#" @click.prevent="zoomToSection('home-section')"> Home </a>
     </div>
   </nav>
 </template>
@@ -40,9 +40,11 @@ function zoomToSection(id) {
 
   if (!section) return
 
-  section.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center'
+  const offset = 100
+
+  window.scrollTo({
+    top: section.offsetTop - offset,
+    behavior: 'smooth'
   })
 
   section.classList.add('zoomed')

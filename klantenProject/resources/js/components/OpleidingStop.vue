@@ -17,8 +17,7 @@ const stappen = [
 </script>
 
 <template>
-  <div class="stop-container">
-
+  <div id="stop-opleiding" class="stop-container">
     <div class="stop-hero">
       <h1>Stoppen met je opleiding</h1>
     </div>

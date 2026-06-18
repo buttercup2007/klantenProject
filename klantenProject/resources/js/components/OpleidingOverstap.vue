@@ -26,7 +26,7 @@ const tips = [
 </script>
 
 <template>
-  <div class="overstap-container">
+  <div id="overstap-opleiding" class="overstap-container">
 
     <div class="overstap-hero">
       <h1>Overstappen & Studiefinanciering</h1>

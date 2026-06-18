@@ -3,8 +3,13 @@
     <div class="nav-title">student financiering</div>
 
     <div class="nav-links">
-      <a href="#info-section">Info</a>
-      <a href="#hbo-section">HBO</a>
+      <a href="#" @click.prevent="zoomToSection('info-section')">
+       Info
+      </a>
+
+      <a href="#" @click.prevent="zoomToSection('hbo-section')">
+       HBO
+      </a>
 
       <div class="dropdown">
         <span class="dropbtn">Opleiding</span>

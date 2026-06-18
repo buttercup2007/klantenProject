@@ -64,28 +64,28 @@ const totalDebt = computed(() => {
   <button @click="goToSection('hbo-section')">
     Ik ga naar het HBO
   </button>
-  <div class="tooltip-text">Volg deze stappen plan om te gaan starten</div>
+  <div class="tooltip-text">Lees informatie over HBO</div>
   </div>
   
   <div class="tooltip-container btn3">
-  <button @click="goToSection('overstap-opleiding')">
-    Hoe activeer ik studiefinancing
+  <button @click="goToSection('start-opleiding')">
+   Hoe activeer ik studiefinanciering
   </button>
-  <div class="tooltip-text">Lees wat je moet doen als je gaat overstappen</div>
+  <div class="tooltip-text">Lees wat je moet doen als je studiefinancing wilt activeren</div>
   </div>
   
   <div class="tooltip-container btn4">
-  <button @click="goToSection('stop-opleiding')">
-    Overstappen met een opleiding
+  <button @click="goToSection('overstap-opleiding')">
+   Overstappen met een opleiding
   </button>
-  <div class="tooltip-text">Lees wat je moet gaan doen als je gaat stoppen</div>
+  <div class="tooltip-text">Lees wat je moet gaan doen als je gaat overstappen met een opleiding</div>
   </div>
   
   <div class="tooltip-container btn5">
-  <button @click="goToSection('hbo-section')">
+  <button @click="goToSection('stop-opleiding')">
     Stoppen met een opleiding
   </button>
-   <div class="tooltip-text">Lees informatie over HBO</div>
+   <div class="tooltip-text">Lees wat je moet gaan doen als je gaat stoppen met een opleiding</div>
   </div>
 </div>
 

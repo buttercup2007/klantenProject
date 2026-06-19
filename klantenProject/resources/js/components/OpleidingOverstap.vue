@@ -66,7 +66,7 @@ const tips = [
   </div>
 
   <section class="card warning">
-  <h2>⚠️ Let op</h2>
+  <h2> Let op!</h2>
   <p>
     Vergeet niet dat je zelf verantwoordelijk bent voor het aanpassen van je studiefinanciering bij DUO.
     Als je dit niet op tijd doet, kun je geld terug moeten betalen.

@@ -139,13 +139,14 @@
 
 .keuzehulp-card {
   background: white;
-  padding: 35px;
+  padding: 40px;
   border-radius: 18px;
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 800px;
+  width: 315px;
+  margin: 0px auto auto -1900px;
 
   text-align: center;
 }

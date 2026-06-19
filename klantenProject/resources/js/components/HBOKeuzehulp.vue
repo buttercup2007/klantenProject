@@ -7,7 +7,7 @@ const resultaat = ref('')
 
 <template>
   <div class="keuzehulp-card">
-    <h2>🎓 HBO Keuzehulp</h2>
+    <h2> HBO Keuzehulp</h2>
 
     <div v-if="stap === 1" class="vraag">
       <p>Volg je momenteel een mbo-opleiding?</p>
@@ -32,7 +32,7 @@ const resultaat = ref('')
     </div>
 
     <div v-if="stap === 3" class="resultaat">
-      <h3>✅ Resultaat</h3>
+      <h3> Resultaat</h3>
 
       <p>
         Je moet studiefinanciering aanvragen voor het HBO.

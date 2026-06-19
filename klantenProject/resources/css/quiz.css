@@ -55,3 +55,37 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 
 }
+
+.quiz-float-btn-wrapper {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1050;
+}
+
+.quiz-float-btn {
+  background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+  color: white;
+  border: none;
+
+  padding: 18px 12px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 12px 0 0 12px;
+
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.2);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  transition: all 0.3s ease;
+}
+
+.quiz-float-btn:hover {
+  padding-right: 20px;
+}

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cache;
 
+
+
 Route::get('/', function () {
     return view('home');
 });
@@ -28,3 +30,4 @@ Route::get('/validate-quiz-token/{token}', function ($token) {
 Route::get('/{any}', function () {
     return view('home');
 })->where('any', '.*');
+

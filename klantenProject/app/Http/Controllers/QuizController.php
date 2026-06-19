@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\QuizResult;
 
 class QuizController extends Controller
 {
+
+
     private array $questions = [
         [
             'question' => 'Wat is studiefinanciering?',
@@ -44,6 +47,8 @@ class QuizController extends Controller
         ],
     ];
 
+    
+
     public function questions()
     {
         $questions = collect($this->questions)->map(function ($question) {
@@ -57,29 +62,38 @@ class QuizController extends Controller
     }
 
     public function submit(Request $request)
-    {
-        $answers = $request->input('answers', []);
+{
+    $answers = $request->input('answers', []);
 
-        $score = 0;
+    $score = 0;
 
-        foreach ($answers as $index => $selectedAnswer) {
+    foreach ($answers as $index => $selectedAnswer) {
 
-            if (!isset($this->questions[$index])) {
-                continue;
-            }
-
-            $correctAnswer = collect(
-                $this->questions[$index]['answers']
-            )->firstWhere('correct', true);
-
-            if ($selectedAnswer === $correctAnswer['text']) {
-                $score++;
-            }
+        if (!isset($this->questions[$index])) {
+            continue;
         }
 
-        return response()->json([
-            'score' => $score,
-            'total' => count($this->questions),
-        ]);
+        $correctAnswer = collect(
+            $this->questions[$index]['answers']
+        )->firstWhere('correct', true);
+
+        if ($selectedAnswer === $correctAnswer['text']) {
+            $score++;
+        }
     }
+
+    // 💾 SAVE TO DATABASE
+    QuizResult::create([
+        'answers' => $answers,
+        'score' => $score,
+        'total' => count($this->questions),
+    ]);
+
+    return response()->json([
+        'score' => $score,
+        'total' => count($this->questions),
+    ]);
+}
+
+    
 }

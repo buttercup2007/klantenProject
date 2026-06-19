@@ -2,6 +2,23 @@
 
 namespace App\Models;
 
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class QuizResult extends Model
+{
+    protected $fillable = [
+        'answers',
+        'score',
+        'total'
+    ];
+
+    protected $casts = [
+        'answers' => 'array'
+    ];
+}
+
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -46,4 +63,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    
 }

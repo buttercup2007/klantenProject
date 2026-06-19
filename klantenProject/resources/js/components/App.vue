@@ -1,5 +1,5 @@
 <script setup>
-import AdminQuizResults from './AdminQuizResults.vue'
+
 import '../../css/info.css'
 import '../../css/hbo.css'
 import '../../css/start.css'
@@ -32,7 +32,7 @@ import HBOKeuzehulp from './HBOKeuzehulp.vue'
     <OpleidingOverstap />
     <OpleidingStop />
     <miniQuiz />
-    <AdminQuizResults />
+   
   </div>
 
   <Footer />
